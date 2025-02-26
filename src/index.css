@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "VTF Justina GEO";
+  src: url("./fonts/Geo.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Proxon";
+  src: url("./fonts/PROXON.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,8 +1,13 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: ["./src/**/*.{html,js,jsx,tsx}"],
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {}
+    extend: {
+      fontFamily: {
+        justina: ["VTF Justina GEO", "sans-serif"],
+        proxon: ["Proxon", "sans-serif"]
+      }
+    }
   },
   plugins: []
 };
