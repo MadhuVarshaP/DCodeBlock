@@ -7,7 +7,6 @@ const Scroll = ({ images, speed = 20, height = "200px" }) => {
 
   React.useEffect(
     () => {
-      // Duplicate images to create seamless loop
       setDuplicatedImages([...images, ...images]);
     },
     [images]

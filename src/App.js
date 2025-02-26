@@ -9,7 +9,7 @@ function App() {
   const images = [scroll1, scroll2, scroll3, scroll4];
 
   return (
-    <div className="">
+    <div className="bg-black">
       <HeroSection />
 
       <Scroll images={images} speed={20} height="90px" />
