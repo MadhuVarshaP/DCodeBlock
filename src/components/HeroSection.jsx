@@ -2,6 +2,9 @@ import React from "react";
 import H from "../images/H.png";
 import Navbar from "./Navbar";
 import bgvideo from "../images/bgvideo.mp4";
+import singularityimage from "../images/singularityimg.png";
+import { Button } from "./Button";
+
 function HeroSection() {
   return (
     <div className="relative min-h-screen text-white font-proxon">
@@ -81,8 +84,65 @@ function HeroSection() {
               <button className="px-4 py-2 rounded-md bg-white/10 hover:bg-white/20 transition-colors duration-300">
                 Prizes & Sponsors
               </button>
+              <button className="px-4 py-2 rounded-md bg-white/10 hover:bg-white/20 transition-colors duration-300">
+                FAQs
+              </button>
+              <button className="px-4 py-2 rounded-md bg-white/10 hover:bg-white/20 transition-colors duration-300">
+                Judging & Rules
+              </button>
+              <button className="px-4 py-2 rounded-md bg-white/10 hover:bg-white/20 transition-colors duration-300">
+                Resources
+              </button>
             </div>
           </div>
+        </div>
+        <div className="flex justify-center mt-3">
+          <img src={singularityimage} alt="" className="w-[280px] h-[76px]" />
+        </div>
+        <div className="flex flex-col items-center justify-center p-4">
+          <div className="w-full max-w-2xl mb-6">
+            <div className="flex items-center justify-center">
+              <div className="relative">
+                <div className="relative bg-[#F86720] w-[152px] h-[107px] flex items-center justify-center z-10 ">
+                  <span className="text-white text-[90px] font-bold tracking-wider flex items-center justify-center ">
+                    Ha
+                  </span>
+                </div>
+              </div>
+
+              <div className="text-[90px] font-bold text-white pl-2 tracking-wider">
+                ckIndia2025
+              </div>
+            </div>
+          </div>
+
+          <div className="text-[28px] font-justina font-light text-white mb-8 ">
+            India's Biggest Web3 & AI Hackathon
+          </div>
+
+          <div className="bg-gradient-to-r from-[#6a1799] to-[#230833] backdrop-blur-md bg-opacity-70 border border-purple-500/30 shadow-lg font-justina text-white py-2 px-12 rounded-xl mb-8">
+            <p className="text-[22px] font-medium">
+              February 28 - September 28
+            </p>
+          </div>
+
+          <div className="flex justify-center w-full text-[25px] font-justina">
+            <div className="flex space-x-3 items-center">
+              <span className="text-[#F86720] font-bold">$150+</span>
+              <span className="text-white">Prize Pool</span>
+            </div>
+            <p className="text-white px-10">|</p>
+            <div className="flex space-x-3 items-center">
+              <span className="text-[#F86720] font-bold">150+</span>
+              <span className="text-white ">Universities</span>
+            </div>
+            <p className="text-white px-10">|</p>
+            <div className="flex space-x-3 items-center">
+              <span className="text-[#F86720] font-bold">25,000+</span>
+              <span className="text-white ">Students</span>
+            </div>
+          </div>
+          <Button className="mt-6">Register</Button>
         </div>
       </div>
     </div>
