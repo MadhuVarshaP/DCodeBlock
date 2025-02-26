@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import logo from "../images/logo.png";
-import { Button } from "./Button";
-import FuturisticButton from "./FuturisticButton";
+import Button from "./Button";
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -42,13 +41,13 @@ function Navbar() {
       </div>
 
       <div className="hidden md:block">
-        <FuturisticButton text="Sign in" isActive={true} />
+        <Button text="Sign in" />
       </div>
 
       {isMenuOpen &&
         <div className="absolute top-[60px] left-0 right-0 bg-black md:hidden">
           <div className="px-4 py-2">
-            <FuturisticButton text="Sign in" isActive={true} />
+            <Button text="Sign in" />
           </div>
         </div>}
     </div>

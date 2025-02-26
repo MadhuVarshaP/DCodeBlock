@@ -5,8 +5,7 @@ import H from "../images/H.png";
 import Navbar from "./Navbar";
 import bgvideo from "../images/bgvideo.mp4";
 import singularityimage from "../images/singularityimg.png";
-import { Button } from "./Button";
-import FuturisticButton from "./FuturisticButton";
+import Button from "./Button";
 
 const navigationItems = [
   "Overview",
@@ -34,7 +33,6 @@ function HeroSection() {
 
   return (
     <div className="relative min-h-screen text-white font-proxon">
-      {/* Background Video */}
       <div className="absolute inset-0 w-full h-full overflow-hidden bg-black opacity-90">
         <video
           className="absolute w-full h-full object-cover opacity-40"
@@ -48,7 +46,6 @@ function HeroSection() {
         </video>
       </div>
 
-      {/* Content Layer */}
       <div className="relative z-10">
         <motion.div
           initial={{ opacity: 0 }}
@@ -58,7 +55,6 @@ function HeroSection() {
           <Navbar />
         </motion.div>
 
-        {/* Zigzag SVG */}
         <svg
           viewBox="0 0 40 7"
           preserveAspectRatio="none"
@@ -83,14 +79,12 @@ function HeroSection() {
           />
         </svg>
 
-        {/* Navigation Section */}
         <div className="flex flex-col md:flex-row items-center px-3 sm:px-4 md:px-6 lg:px-10 xl:px-16 py-2 sm:py-3 md:py-5 lg:py-6">
-          {/* Logo section */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex space-x-2 sm:space-x-3 items-center mb-3 sm:mb-4 md:mb-0"
+            className="flex space-x-2 sm:space-x-3 items-center mb-3 sm:mb-4 md:mb-0 md:mr-8 lg:mr-12"
           >
             <img
               src={H}
@@ -102,31 +96,28 @@ function HeroSection() {
             </p>
           </motion.div>
 
-          {/* Centered glassy container */}
           <div className="flex-1 flex justify-center w-full overflow-x-auto scrollbar-hide md:overflow-visible">
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="bg-[#B026FF]/40 backdrop-blur-md border border-[#B026FF]/30 shadow-lg rounded-lg p-1.5 sm:p-2 md:p-2.5 flex flex-nowrap md:flex-wrap justify-start md:justify-center gap-1.5 sm:gap-2 md:gap-3 lg:gap-4 xl:gap-5"
+              className="bg-[#B026FF]/20 backdrop-blur-md border border-[#B026FF]/30 shadow-lg rounded-xl p-1 sm:p-1.5 md:p-2 flex flex-nowrap md:flex-wrap justify-start md:justify-center gap-0.5 sm:gap-1 md:gap-1.5"
             >
               {navigationItems.map(text =>
-                <FuturisticButton
-                  className="px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 rounded-md bg-white/10 hover:bg-white/20 transition-colors duration-300 text-xs sm:text-sm md:text-base lg:text-lg whitespace-nowrap"
+                <Button
+                  key={text}
                   text={text}
-                  isActive={true}
+                  className="px-1.5 sm:px-2 md:px-3 py-1 sm:py-1.5 rounded-md transition-colors duration-300 text-xs sm:text-sm md:text-base lg:text-lg whitespace-nowrap"
                 />
               )}
             </motion.div>
           </div>
         </div>
 
-        {/* Main Content Area */}
         <div
           className="flex flex-col items-center justify-center p-3 sm:p-4 md:p-6 lg:p-8"
           ref={ref}
         >
-          {/* Singularity Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -140,7 +131,6 @@ function HeroSection() {
             />
           </motion.div>
 
-          {/* HackIndia Title */}
           <motion.div
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
@@ -170,7 +160,6 @@ function HeroSection() {
             </div>
           </motion.div>
 
-          {/* Subtitle and Date */}
           <motion.div
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
@@ -188,7 +177,6 @@ function HeroSection() {
             </div>
           </motion.div>
 
-          {/* Stats Section */}
           <motion.div
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
@@ -214,7 +202,6 @@ function HeroSection() {
             )}
           </motion.div>
 
-          {/* Register Button */}
           <motion.div
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
@@ -222,14 +209,7 @@ function HeroSection() {
             transition={{ duration: 0.5, delay: 0.8 }}
             className="mt-4 sm:mt-5 md:mt-6 lg:mt-8"
           >
-            {/* <Button className="text-sm sm:text-base md:text-lg lg:text-xl">
-              Register
-            </Button> */}
-            <FuturisticButton
-              className="text-sm sm:text-base md:text-lg lg:text-xl"
-              text="Register"
-              isActive={true}
-            />
+            <Button className="text-sm sm:text-base md:text-lg lg:text-xl" />
           </motion.div>
         </div>
       </div>
