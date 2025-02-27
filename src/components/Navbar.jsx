@@ -45,7 +45,7 @@ function Navbar() {
       </div>
 
       {isMenuOpen &&
-        <div className="absolute top-[60px] left-0 right-0 bg-black md:hidden">
+        <div className="absolute top-[60px]  right-0 bg-black md:hidden">
           <div className="px-4 py-2">
             <Button text="Sign in" />
           </div>
